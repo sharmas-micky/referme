@@ -8,7 +8,7 @@ function Job() {
 
   const [Data , setData] = useState({
     data:[
-      {company:'microsoft',designation:'developer'}
+      
     ]
   })
 

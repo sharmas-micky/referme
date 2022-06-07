@@ -7,7 +7,7 @@ function Job() {
 
 
   const [Data , setData] = useState({
-    data:[
+    data:[{name:''},{name2:''}
       
     ]
   })

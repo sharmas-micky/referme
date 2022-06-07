@@ -14,7 +14,7 @@ function Header() {
       let response =  await fetch('http://refertest.pythonanywhere.com/user/data');
       let parsedData = await response.json();
       setData(parsedData)
-      console.log(parsedData)
+
     }
     useEffect(()=>{
       
@@ -42,7 +42,7 @@ function Header() {
 }
 
 const Container = styled.div`
-  background-color: aliceblue;
+  // background-color: aliceblue;
   width:80%;
   display: flex;
   justify-content:space-between;

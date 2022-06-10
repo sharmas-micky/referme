@@ -19,7 +19,7 @@ function JobCard(props) {
              <SkilSet2>
                {props.skills && props.skills.map((element)=>{
                  return(
-                  <Skil>{element}</Skil>
+                  <Skil key={element}>{element}</Skil>
                  )
                })}
              </SkilSet2>

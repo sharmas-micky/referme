@@ -7,17 +7,16 @@ function Job() {
 
 
   const [Data , setData] = useState({
-    data:[
-      {company:'microsoft',designation:'developer'}
-    ]
+    data: 
+       [  ]
   })
 
   const fetchdata = async ()=>{
     let response =  await fetch('http://refertest.pythonanywhere.com/job/openings');
     let parsedData = await response.json();
     setData(parsedData)
+    console.log(parsedData)
     
-    // console.log(parsedData)
     console.log(Data.data[0])
   }
   useEffect( ()=>{
@@ -27,19 +26,18 @@ function Job() {
   
   return (
     <Container className='container'>
-        {Data.data.map((element)=>{
+        {Data.data && Data.data.map((element)=>{
                  return(
                   <Card 
                   key ={element.company}
-                  company={element.company} 
+                  company={element.company}
                   designation={element.designation}
                   experience={element.min_experience}
                   Location={element.location}
                   skills = {element.skills}
                 />
                  )
-               })}
-              
+               })}      
     </Container>
   )
 }

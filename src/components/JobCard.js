@@ -17,9 +17,9 @@ function JobCard(props) {
 
            <SkilSet className="container">
              <SkilSet2>
-               {props.skills.map((element)=>{
+               {props.skills && props.skills.map((element)=>{
                  return(
-                  <Skil>{element}</Skil>
+                  <Skil key={element}>{element}</Skil>
                  )
                })}
              </SkilSet2>
@@ -44,7 +44,7 @@ const Card = styled.div`
 const Button = styled.button`
   align-text:center;
   border:1px solid white;
-  font-size:8px;
+  font-size:16px;
   border-radius:4px;
   padding:0px 16px;
   color:white;
@@ -53,18 +53,18 @@ const Button = styled.button`
 `
 const CompanyName = styled.text`
   margin:4px 0px;
-  font-size:11px;
+  font-size:16px;
 `
 const Designation = styled.text`
   // margin:2px;
-  font-size:16px;
+  font-size:25px;
 `
 const Experience = styled.text`
   // margin:2px;
   max-width:fit-content;
   padding:1px 4px;
   border-radius:9px;
-  font-size:8px;
+  font-size:13px;
   background-color:#d7d9db;
 `
 
@@ -92,7 +92,7 @@ const Skil = styled.div`
     padding:4px;
     // margin:0px 6px;
     border-radius:7px;
-    font-size:8px;
+    font-size:16px;
     background-color:#d7d9db;
 `
 const JobDet = styled.div`
@@ -101,7 +101,7 @@ const JobDet = styled.div`
   flex-wrap:wrap;
 `
 const Location = styled.text`
-  font-size:8px;
+  font-size:12px;
   width:fit-content;
   margin:0px 2px;
 `

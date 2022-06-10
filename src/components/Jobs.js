@@ -27,7 +27,7 @@ function Job() {
   
   return (
     <Container className='container'>
-        {Data.data.map((element)=>{
+        {Data.data && Data.data.map((element)=>{
                  return(
                   <Card 
                   key ={element.company}

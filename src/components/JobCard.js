@@ -17,7 +17,7 @@ function JobCard(props) {
 
            <SkilSet className="container">
              <SkilSet2>
-               {props.skills.map((element)=>{
+               {props.skills && props.skills.map((element)=>{
                  return(
                   <Skil>{element}</Skil>
                  )
